@@ -43,18 +43,13 @@ return require("packer").startup(function(use)
         },
     })
     -- lsp format
-    use("/jose-elias-alvarez/null-ls.nvim")
+    use("jose-elias-alvarez/null-ls.nvim")
     -- which key
     use({
         "folke/which-key.nvim",
         config = function()
             vim.o.timeout = true
             vim.o.timeoutlen = 300
-            require("which-key").setup({
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            })
         end,
     })
     -- git status bar at bottom
@@ -77,4 +72,10 @@ return require("packer").startup(function(use)
             "DaikyXendo/nvim-material-icon", -- optional, for file icons
         },
     })
+
+    -- testing
+    use "lewis6991/gitsigns.nvim"
+
+
+
 end)
