@@ -5,8 +5,8 @@ vim.g.loaded_netrwPlugin = 1
 -- see :help  nvim-tree
 require("nvim-tree").setup({
     update_cwd = true,
-    open_on_setup = true,
-    open_on_setup_file = true,
+    open_on_setup = false,
+    open_on_setup_file = false,
     actions = {
         open_file = {
             resize_window = true,
@@ -42,3 +42,6 @@ require("nvim-tree").setup({
         ignore = false,
     },
 })
+
+-- use leader t, to show tree
+vim.keymap.set("n", "<leader>t", vim.cmd.NvimTreeToggle, { desc = "TreeToggle" })

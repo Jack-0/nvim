@@ -20,11 +20,11 @@ vim.keymap.set(
 
 -- open netrw
 --vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format" })
 
 -- rename defintion, note require :wa to enact
 local rd = require("custom.renameDefinition")
 vim.keymap.set("n", "<leader>rd", rd.rename, { desc = "Rename defintion" })
---vim.keymap.set("n", "<leader>rd", vim.lsp.buf.rename)
 
 local hw = require("custom.helloWorld")
 vim.keymap.set("n", "<leader>kc", hw.helloWorld, { desc = "Print boo2" })
