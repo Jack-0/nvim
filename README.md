@@ -27,12 +27,12 @@ custom lua scripts
 
 # TODO
 - [x] rd, renames definition
-- [ ] add definitions to all custom key bindings
+- [x] add definitions to all custom key bindings
 - [ ] set all needed keybindings
 - [ ] rd, renames definition AND only saves lines that do rename OR saves all?
 - [ ] rf, find references using LSP
-- [ ] visual mode bind to comment out all selected lines (note JSX)
-- [ ] ?any mode line comment with <C-/>
+- [x] visual mode bind to comment out all selected lines (note JSX)
+- [x] ?any mode line comment with <C-/> ... use <leader>gc / <leader>g-b 
 - [ ] in visual mode use <leader>gc to git commit selected lines
 - [ ] git pull and push bindings
 - [ ] have formatting, use prettier if a config exists else lsp format
@@ -40,7 +40,6 @@ custom lua scripts
 - [ ] auto close html tags, maybe even parenthesis etc
 - [ ] bind keys for merging
 - [ ] handle W, H, E display, maybe intelligent code completion 
-- [ ] intelligent code completion
+- [ ] intelligent code completion? coc?
 - [ ] use tab/enter to auto complete seems to not work atm
 - [ ] find TODO's with plugin or custom script
-
