@@ -11,10 +11,18 @@ return require("packer").startup(function(use)
         tag = "0.1.1",
         requires = { { "nvim-lua/plenary.nvim" } },
     })
+
     -- syntax highlighting
-    use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    use("nvim-treesitter/nvim-treesitter", {
+        run = ":TSUpdate",
+    })
     -- see treesitter token tree
     use("nvim-treesitter/playground")
+    -- comment code using tree sitter
+    use("numToStr/Comment.nvim")
+    -- jsx support in comment.nvim
+    use("JoosepAlviste/nvim-ts-context-commentstring")
+
     -- harpoon, tag files for quick nav
     use("ThePrimeagen/harpoon")
     -- undo history
@@ -66,16 +74,24 @@ return require("packer").startup(function(use)
         opts = {},
     })
     -- nvim tree
-    use({
+    --[[ use({
         "DaikyXendo/nvim-tree.lua",
         requires = {
             "DaikyXendo/nvim-material-icon", -- optional, for file icons
         },
     })
+    ]]
+    -- git signs (displays git status in left margin)
+    use("lewis6991/gitsigns.nvim")
 
-    -- testing
-    use "lewis6991/gitsigns.nvim"
+    -- test autotag
+    use("windwp/nvim-ts-autotag")
 
-
-
+    -- auto close [{()}]
+    --[[ use({
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup({})
+        end,
+    }) ]]
 end)

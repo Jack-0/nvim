@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names
-  ensure_installed = {"javascript", "typescript", "c", "lua", "vim", "vimdoc", "query"},
+  ensure_installed = {"javascript", "typescript", "c", "lua", "vim", "vimdoc", "query", "tsx"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -18,4 +18,11 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+  auto_tag = {enable = true},
+
+  -- :Telescope help_tags commentstring
+  --[[ context_commentstring = {
+    enable = true,
+  }, ]]
+
 }
