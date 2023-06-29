@@ -13,7 +13,7 @@ vim.keymap.set("n", "Q", "<nop>", { desc = "<nop>" })
 -- find and replace current selected word
 vim.keymap.set(
     "n",
-    "<leader>s",
+    "<leader>r",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "Find and replace word" }
 )

@@ -1,2 +1,7 @@
 local wk = require("which-key")
-wk.register(mappings, opts)
+
+wk.register({
+	s = {
+		name = "search",
+	},
+}, { prefix = "<leader>" })
