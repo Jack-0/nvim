@@ -1,5 +1,6 @@
 local M = {}
 
+-- LSP level rename that writes all changes
 function M.rename()
     local curr_name = vim.fn.expand("<cword>")
     local value = vim.fn.input("LSP Rename: ", curr_name)
@@ -36,6 +37,9 @@ function M.rename()
             end
         end
 
+        -- write all
+        vim.cmd("wa")
+
         -- compose the right print message
         print(
             string.format(
@@ -44,9 +48,11 @@ function M.rename()
                 changed_instances_count == 1 and "" or "s",
                 changed_files_count,
                 changed_files_count == 1 and "" or "s",
-                changed_files_count > 1 and "To save them run ':wa'" or ""
+                changed_files_count > 1 and "Wrote to multiple files!" or ""
             )
         )
+
+
     end)
 end
 
