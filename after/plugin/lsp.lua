@@ -14,10 +14,14 @@ lsp.ensure_installed({
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
-	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-	['<C-y>'] = cmp.mapping.confirm({select = true}),
-	['<C-space>'] = cmp.mapping.complete(),
+	['<c-k>'] = cmp.mapping.select_prev_item(cmp_select),
+	['<c-j>'] = cmp.mapping.select_next_item(cmp_select),
+	['<c-i>'] = cmp.mapping.confirm({select = true}), -- was control Y
+	['<c-space>'] = cmp.mapping.complete(),
+})
+
+cmp.setup({
+    mapping = cmp_mappings
 })
 
 --lsp.set_preferences({
