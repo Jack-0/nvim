@@ -28,3 +28,6 @@ vim.keymap.set("n", "<leader>rd", rd.rename, { desc = "Rename defintion" })
 
 local hw = require("custom.helloWorld")
 vim.keymap.set("n", "<leader>kc", hw.helloWorld, { desc = "Print boo2" })
+
+-- terminal mode ESC
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
