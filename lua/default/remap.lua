@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 
 -- move code up and down in visual mode
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected up" })
@@ -11,16 +10,12 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "copy to OS clipboar
 vim.keymap.set("n", "Q", "<nop>", { desc = "<nop>" })
 
 -- find and replace current selected word
-vim.keymap.set(
-    "n",
-    "<leader>rw",
-    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "replace word" }
-)
+vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "replace word" })
 
 -- open netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Ex (project view)"})
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Ex (project view)" })
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format" })
 
--- allow ESC in terminal mode
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
+-- terminal
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]]) -- allow ESC
+vim.keymap.set("n", "<leader>t", "<cmd>below 20split +terminal<CR>", { desc = "open terminal" })
