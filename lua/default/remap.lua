@@ -13,21 +13,14 @@ vim.keymap.set("n", "Q", "<nop>", { desc = "<nop>" })
 -- find and replace current selected word
 vim.keymap.set(
     "n",
-    "<leader>r",
+    "<leader>rw",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "Find and replace word" }
+    { desc = "replace word" }
 )
 
 -- open netrw
---vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc = "Ex (project view)"})
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format" })
 
--- rename defintion, note require :wa to enact
-local rd = require("custom.renameDefinition")
-vim.keymap.set("n", "<leader>rd", rd.rename, { desc = "Rename defintion" })
-
-local hw = require("custom.helloWorld")
-vim.keymap.set("n", "<leader>kc", hw.helloWorld, { desc = "Print boo2" })
-
--- terminal mode ESC
+-- allow ESC in terminal mode
 vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])

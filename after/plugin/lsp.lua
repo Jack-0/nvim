@@ -68,6 +68,10 @@ lsp.on_attach(function(_, bufnr)
 	nmap("<leader>lw", vim.lsp.buf.workspace_symbol, "workspace symbols")
 	nmap("<leader>lh", vim.lsp.buf.signature_help, "signature help")
 
+    -- rename defintion, note require :wa to enact
+    local rd = require("custom.renameDefinition")
+    vim.keymap.set("n", "<leader>rd", rd.rename, { desc = "Rename defintion" })
+
 	-- diagnostics (hints, warnings and errors)
 	nmap("<leader>e", vim.diagnostic.open_float, "open diagnostic")
 	nmap("<leader>le", vim.diagnostic.setloclist, "list diagnostics")
