@@ -40,7 +40,6 @@ function M.rename()
         -- write all
         vim.cmd("wa")
 
-        -- compose the right print message
         print(
             string.format(
                 "renamed %s instance%s in %s file%s. %s",
@@ -51,8 +50,6 @@ function M.rename()
                 changed_files_count > 1 and "Wrote to multiple files!" or ""
             )
         )
-
-
     end)
 end
 
