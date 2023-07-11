@@ -4,21 +4,6 @@
 - use :PackerInstall to install
 - use :checkhealth, then ensure you install missing packages with your OS's package manager
 
-### lua/default/packer
-define packages here
-
-### lua/default/set
-vim config options
-
-### lua/default/remap
-key mappings
-
-### after/plugin/*
-plugin config
-
-### plugin/*
-ignore, this is the output dir
-
 ### lua/custom/*
 custom lua scripts
 
