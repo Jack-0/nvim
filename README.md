@@ -20,3 +20,6 @@
 ## lua/custom/\*
 
 custom lua scripts
+
+# Issues
+- include issues with c++ use `cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON` with cmake

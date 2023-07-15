@@ -40,6 +40,7 @@ end
 -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
 local servers = {
   clangd = {},
+  cmake = {},
   gopls = {},
   pyright = {},
   rust_analyzer = {},

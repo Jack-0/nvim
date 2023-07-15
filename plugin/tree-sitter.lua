@@ -1,6 +1,6 @@
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
-  -- Add languages to be installed here that you want installed for treesitter
+  -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
   ensure_installed = {
     'c',
     'cpp',
@@ -14,7 +14,8 @@ require('nvim-treesitter.configs').setup {
     'vim',
     'query',
     'haskell',
-    'c_sharp'
+    'c_sharp',
+    'cmake'
   },
   --ensure_installed = "all",
 
