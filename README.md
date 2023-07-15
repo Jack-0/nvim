@@ -1,31 +1,22 @@
-# NVIM
+# Neovim
 
-- use :so to apply changes
-- use :PackerInstall to install
+👷‍♂️📈 _Neovim configuration_
+
+## Install
+
+1. clone repo
+2. symbolic link
+   - `ln -s ~/<clone_location>/nvim .config/nvim`
+
+## Help
+
+- use :Lazy for package manager
 - use :checkhealth, then ensure you install missing packages with your OS's package manager
+- use :Mason and <C-f> to filter by language
+- ensure **new languages** are added to [plugin/lsp.lua](plugin/lsp.lua) server list and optionally [plugin/tree-sitter.lua](plugin/tree-sitter.lua) ensure installed list
 
-### lua/custom/*
+# Files
+
+## lua/custom/\*
+
 custom lua scripts
-
-# tips
-- test
-- Use :Mason and <C-f> to filter by language
-
-# TODO
-- [x] rd, renames definition
-- [x] add definitions to all custom key bindings
-- [ ] set LSP keybinding
-- [ ] rf, find references using LSP
-- [x] rd, renames definition AND saves all
-- [x] visual mode bind to comment out all selected lines (note JSX)
-- [x] ?any mode line comment with <C-/> ... use <leader>gc / <leader>g-b 
-- [ ] in visual mode use <leader>gc to git commit selected lines... maybe this is done with Gdiff
-- [ ] git pull and push bindings
-- [ ] have formatting, use prettier if a config exists else lsp format
-- [x] handle git blame <leader>b
-- [x] auto close html tags, maybe even parenthesis etc
-- [ ] bind keys for merging
-- [ ] handle W, H, E display, maybe intelligent code completion 
-- [ ] intelligent code completion? coc?
-- [ ] use tab/enter to auto complete seems to not work atm
-- [ ] find TODO's with plugin or custom script
