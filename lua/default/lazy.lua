@@ -50,14 +50,14 @@ require('lazy').setup({
 
       -- LSP completion capabilities
       'hrsh7th/cmp-nvim-lsp',
-      
+
       -- adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
     },
   },
 
   { 'folke/which-key.nvim',       opts = {} },
-  
+
   {
     -- git signs
     'lewis6991/gitsigns.nvim',
@@ -81,13 +81,15 @@ require('lazy').setup({
 
   {
     -- theme
-    --'navarasu/onedark.nvim',
     'folke/tokyonight.nvim',
+    -- 'joshdick/onedark.vim',
+    -- 'catppuccin/nvim',
     priority = 1000,
     config = function()
-      --vim.cmd.colorscheme 'onedark'
-      vim.cmd.colorscheme 'tokyonight'
-      end,
+      vim.cmd [[colorscheme tokyonight]]
+      -- vim.cmd.colorscheme 'onedark'
+      -- vim.cmd.colorscheme 'catppuccin-frappe'
+    end,
   },
 
   -- icons
@@ -101,8 +103,9 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        --theme = 'onedark',
         theme = "tokyonight",
+        -- theme = 'onedark',
+        -- theme = "catppuccin-frappe",
         component_separators = '|',
         section_separators = '',
       },
@@ -121,13 +124,13 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',         opts = {} },
-  { "JoosepAlviste/nvim-ts-context-commentstring"}, -- support for jsx
+  { 'numToStr/Comment.nvim',                      opts = {} },
+  { "JoosepAlviste/nvim-ts-context-commentstring" }, -- support for jsx
 
   -- fuzzy
-  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'nvim-telescope/telescope.nvim',              branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
 
-  -- faster fzf 
+  -- faster fzf
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'make',
@@ -146,10 +149,9 @@ require('lazy').setup({
   },
 
   -- harpoon
-  {"ThePrimeagen/harpoon"},
+  { "ThePrimeagen/harpoon" },
 
   -- undo tree
-  {"mbbill/undotree"},
+  { "mbbill/undotree" },
 
 }, {})
-
