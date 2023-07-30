@@ -12,6 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- tmux, allows <C-[hjkl]> pane navigation in nvim
+  {
+    'christoomey/vim-tmux-navigator'
+  },
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
