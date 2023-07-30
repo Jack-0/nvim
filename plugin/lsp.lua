@@ -1,8 +1,6 @@
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
 
-  print("attached")
-
   local nmap = function(keys, func, desc)
     if desc then
       desc = 'LSP: ' .. desc
