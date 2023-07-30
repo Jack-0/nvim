@@ -2,6 +2,7 @@
 require('nvim-treesitter.configs').setup {
   -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
   ensure_installed = {
+    'bash',
     'c',
     'cpp',
     'go',
