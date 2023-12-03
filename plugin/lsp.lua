@@ -45,10 +45,10 @@ local servers = {
   tsserver = {},
   eslint = {},
   svelte = {},
-  csharp_ls = {},
-  hls = {
-    filetypes = { 'haskell', 'lhaskell', 'cabal' },
-  },
+  --csharp_ls = {},
+  -- hls = {
+  --   filetypes = { 'haskell', 'lhaskell', 'cabal' },
+  -- },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
