@@ -12,6 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- Nvim tree (file explorer)
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
   -- tmux, allows <C-[hjkl]> pane navigation in nvim
   {
     'christoomey/vim-tmux-navigator'
@@ -92,9 +101,6 @@ require('lazy').setup({
     end,
   },
 
-  -- icons
-  { 'nvim-tree/nvim-web-devicons' },
-  --{ "DaikyXendo/nvim-material-icon" },
 
   {
     -- Set lualine as statusline
@@ -111,16 +117,16 @@ require('lazy').setup({
       },
     },
   },
-
   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+    main = "ibl",
+    -- opts = {
+    --   char = '┊',
+    --   show_trailing_blankline_indent = false,
+    -- },
   },
 
   -- "gc" to comment visual regions/lines

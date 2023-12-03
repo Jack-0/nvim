@@ -17,4 +17,4 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format" })
 
 -- terminal
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]]) -- allow ESC
-vim.keymap.set("n", "<leader>t", "<cmd>below 20split +terminal<CR>", { desc = "open terminal" })
+-- vim.keymap.set("n", "<leader>t", "<cmd>below 20split +terminal<CR>", { desc = "open terminal" })
