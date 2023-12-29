@@ -15,7 +15,7 @@ pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
@@ -24,7 +24,8 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
-vim.keymap.set("n", "<C-p>", function() require('telescope.builtin').git_files({ show_untracked = true }) end, { desc = "find git files" })
+vim.keymap.set("n", "<leader><space>", function() require('telescope.builtin').git_files({ show_untracked = true }) end,
+  { desc = "find git files" })
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = 'search files' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = 'search help' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = 'search current word' })
