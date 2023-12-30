@@ -2,11 +2,26 @@
 
 👷‍♂️📈 _Neovim configuration_
 
+Neovim configuration using the Lazy Vim plugin manager
+
 ## Install
 
 1. clone repo
 2. symbolic link
    - `ln -s ~/<clone_location>/nvim .config/nvim`
+
+## structure
+
+- lua
+   - config
+      - autocmds.lua [reference](https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua)
+      - keymaps.lua [reference](https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua)
+      - lazy.lua
+      - options.lua [reference](https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua)
+   - plugins
+      - _neovim plugins in here_
+   - custom
+      - _custom plugins_
 
 ## Help
 
