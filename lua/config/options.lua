@@ -1,5 +1,9 @@
 -- options are automatically loaded before lazy.nvim startup
 
+-- netrw
+vim.g.netrw_liststyle = 3 -- netrw tree style
+vim.g.netrw_banner = 0
+
 --vim.opt.nu = true
 vim.opt.number = true
 vim.opt.relativenumber = true
