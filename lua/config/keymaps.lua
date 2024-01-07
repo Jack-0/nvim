@@ -1,6 +1,3 @@
--- keymaps are automatically loaded on the VeryLazy event
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 -- keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -66,6 +63,5 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "UndoTree" })
 
 
-
 -- nvim tree toggle
-vim.keymap.set("n", "<leader>t", vim.cmd.NvimTreeToggle, { desc = "project tree view"})
+-- vim.keymap.set("n", "<leader>t", vim.cmd.NeoTree.toggle, { desc = "project tree view"})
