@@ -3,7 +3,7 @@ return {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
-        -- "nvim-telescope/telescope.nvim",
+      -- "nvim-telescope/telescope.nvim",
       -- automatically install LSPs to stdpath for neovim
       { 'williamboman/mason.nvim', config = true },
       'williamboman/mason-lspconfig.nvim',
@@ -15,10 +15,9 @@ return {
       'folke/neodev.nvim',
     },
 
-    config = function ()
+    config = function()
       --  This function gets run when an LSP connects to a particular buffer.
       local on_attach = function(_, bufnr)
-
         local nmap = function(keys, func, desc)
           if desc then
             desc = 'LSP: ' .. desc
@@ -74,6 +73,10 @@ return {
             telemetry = { enable = false },
           },
         },
+        -- ccls = {},
+        templ = {},  -- templ htmx golang
+        htmx = { filetypes = { "html", "templ" } },
+        html = { filetypes = { "html", "templ" } }
       }
 
       -- Setup neovim lua configuration
