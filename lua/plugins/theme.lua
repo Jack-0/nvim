@@ -2,17 +2,21 @@ return {
   -- theme
   {
     'folke/tokyonight.nvim',
-    -- 'joshdick/onedark.vim',
-    -- 'catppuccin/nvim',
     priority = 1000,
     config = function()
-      vim.cmd [[colorscheme tokyonight]]
-      -- vim.cmd.colorscheme 'onedark'
-      -- vim.cmd.colorscheme 'catppuccin-frappe'
+      ---@diagnostic disable-next-line: missing-fields
+      require('tokyonight').setup {
+        styles = {
+          comments = { italic = false }, -- Disable italics in comments
+        },
+      }
+
+      -- Load the colorscheme here.
+      -- Like many other themes, this one has different styles, and you could load
+      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+      vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
-
-
   -- Set lualine as statusline
   {
     'nvim-lualine/lualine.nvim',

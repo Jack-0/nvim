@@ -38,3 +38,4 @@ custom lua scripts
 
 # Issues
 - include issues with c++ use `cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON` with cmake
+- treesitter ':TSUnistall {lang}' remove $HOME/.local/share/nvim/site/parser/{lang}.so' :TSInstall {lang}'
