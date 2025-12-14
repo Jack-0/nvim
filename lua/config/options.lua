@@ -5,8 +5,8 @@
 -- use :help '<option>' i.e help 'wrap'
 
 -- disable netrw
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- options are automatically loaded before lazy.nvim startup
 
