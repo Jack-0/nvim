@@ -19,6 +19,8 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     -- { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
+    -- { import = "lua.plugins.lsp" },
+    -- { import = "plugins.tree-sitter" },
     { import = "plugins" },
   },
   defaults = {
@@ -42,7 +44,7 @@ require("lazy").setup({
         "gzip",
         -- "matchit",
         -- "matchparen",
-        -- "netrwPlugin",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
