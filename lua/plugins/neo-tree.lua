@@ -11,11 +11,18 @@ return {
 
     keys = {
       {
-        "<leader>t",
+        "<leader>tt",
         function()
           require("neo-tree.command").execute({ toggle = true })
         end,
         desc = "Explorer NeoTree (root dir)",
+      },
+      {
+        "<leader>tc",
+        function()
+          require("neo-tree.command").execute({ filesystem = true, reveal = true })
+        end,
+        desc = "Neotree at current location",
       },
 
     },
