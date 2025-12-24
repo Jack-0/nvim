@@ -10,6 +10,8 @@ vim.g.loaded_netrwPlugin = 1
 
 -- options are automatically loaded before lazy.nvim startup
 
+vim.opt.clipboard:append 'unnamed' -- share clipboard (unamed is macOS specific)
+
 -- netrw
 vim.g.netrw_liststyle = 3 -- netrw tree style
 vim.g.netrw_banner = 0
