@@ -218,6 +218,7 @@ return {
         rust_analyzer = {},
         eslint = {},
         svelte = {},
+        postgres_lsp = { filetypes = {"sql"} },
 
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -300,6 +301,7 @@ return {
 
       formatters_by_ft = {
         lua = { "stylua" },
+        sql = { "pg_format" }
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
