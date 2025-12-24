@@ -108,7 +108,7 @@ return {
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          map("<leader>gs", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
+          map("<leader>gS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
 
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see
