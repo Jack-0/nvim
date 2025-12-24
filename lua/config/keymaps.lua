@@ -2,5 +2,3 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 -- keymaps are automatically loaded on the VeryLazy event
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
