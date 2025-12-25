@@ -13,16 +13,16 @@ return {
       {
         "<leader>tt",
         function()
-          require("neo-tree.command").execute({ toggle = true })
+          require("neo-tree.command").execute({ toggle = true,  position="left" })
         end,
         desc = "Explorer NeoTree (root dir)",
       },
       {
         "<leader>tc",
         function()
-          require("neo-tree.command").execute({ filesystem = true, reveal = true })
+          require("neo-tree.command").execute({ filesystem = true, reveal = true, position="float" })
         end,
-        desc = "Neotree at current location",
+        desc = "Neotree at current location (float)",
       },
 
     },
