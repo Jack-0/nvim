@@ -39,7 +39,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 12
 
 -- vim.opt.hlsearch = false
 -- vim.opt.incsearch = true
