@@ -56,6 +56,7 @@ return {
               require('telescope.builtin').live_grep({ default_text = text })
             end, { desc = 'search grep selection' })
             vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = 'search diagnostics' })
+            vim.keymap.set('n', '<leader>ss', require('telescope.builtin').git_status, { desc = 'search git' })
         end
     },
 
