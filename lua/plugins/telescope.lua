@@ -50,6 +50,7 @@ return {
             vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = 'search current word' })
             vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = 'search grep' })
             vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = 'search diagnostics' })
+            vim.keymap.set('n', '<leader>ss', require('telescope.builtin').git_status, { desc = 'search git' })
         end
     },
 
